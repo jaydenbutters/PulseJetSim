@@ -1,0 +1,542 @@
+# data/sample_configurations.json
+{
+  "metadata": {
+    "version": "1.0.0",
+    "description": "Sample pulse jet engine configurations for different applications",
+    "last_updated": "2024-01-15",
+    "author": "Pulse Jet Modeler Contributors",
+    "license": "MIT",
+    "disclaimer": "These are reference designs for educational purposes. Always validate designs through proper engineering analysis and testing."
+  },
+  "categories": {
+    "hobby": "Small engines for RC aircraft and experimental projects",
+    "demonstration": "Medium engines for educational demonstrations",
+    "research": "Larger engines for research and development",
+    "experimental": "Advanced configurations for experimental studies"
+  },
+  "configurations": [
+    {
+      "id": "hobby_micro",
+      "name": "Micro Hobby Engine",
+      "category": "hobby",
+      "description": "Ultra-compact design for micro RC aircraft and desktop demonstrations",
+      "target_applications": [
+        "Micro RC aircraft",
+        "Desktop demonstrations",
+        "Educational models",
+        "Science fair projects"
+      ],
+      "estimated_performance": {
+        "thrust": "5-15 N",
+        "frequency": "120-180 Hz",
+        "fuel_consumption": "0.5-1.0 kg/h",
+        "weight": "0.5-1.0 kg"
+      },
+      "geometry": {
+        "combustion_chamber_length": 20,
+        "combustion_chamber_diameter": 6,
+        "intake_diameter": 3,
+        "exhaust_diameter": 4,
+        "exhaust_length": 30
+      },
+      "valves": {
+        "valve_type": "Reed Valves",
+        "num_valves": 2,
+        "valve_area": 6
+      },
+      "operating": {
+        "fuel_type": "Propane",
+        "air_fuel_ratio": 15.7,
+        "ambient_pressure": 101.3,
+        "ambient_temp": 20
+      },
+      "design_notes": {
+        "advantages": [
+          "Very lightweight and compact",
+          "Easy to manufacture",
+          "Safe for educational use",
+          "Low fuel consumption"
+        ],
+        "limitations": [
+          "Low thrust output",
+          "High frequency may cause vibration",
+          "Limited scalability"
+        ],
+        "construction_tips": [
+          "Use lightweight materials (aluminum)",
+          "Ensure good valve sealing",
+          "Consider vibration mounting",
+          "Use small fuel tank for safety"
+        ]
+      }
+    },
+    {
+      "id": "hobby_small",
+      "name": "Small Hobby Engine",
+      "category": "hobby",
+      "description": "Compact design for RC aircraft and light experimental vehicles",
+      "target_applications": [
+        "RC aircraft (1-3 kg)",
+        "Go-karts",
+        "Experimental vehicles",
+        "Student projects"
+      ],
+      "estimated_performance": {
+        "thrust": "15-35 N",
+        "frequency": "90-130 Hz",
+        "fuel_consumption": "1.5-3.0 kg/h",
+        "weight": "1.5-2.5 kg"
+      },
+      "geometry": {
+        "combustion_chamber_length": 30,
+        "combustion_chamber_diameter": 8,
+        "intake_diameter": 4,
+        "exhaust_diameter": 5,
+        "exhaust_length": 40
+      },
+      "valves": {
+        "valve_type": "Reed Valves",
+        "num_valves": 3,
+        "valve_area": 10
+      },
+      "operating": {
+        "fuel_type": "Gasoline",
+        "air_fuel_ratio": 14.7,
+        "ambient_pressure": 101.3,
+        "ambient_temp": 20
+      },
+      "design_notes": {
+        "advantages": [
+          "Good thrust-to-weight ratio",
+          "Moderate fuel consumption",
+          "Proven design approach",
+          "Suitable for beginners"
+        ],
+        "limitations": [
+          "Noise levels require consideration",
+          "Vibration isolation needed",
+          "Regular maintenance required"
+        ],
+        "construction_tips": [
+          "Use steel for combustion chamber",
+          "Aluminum exhaust pipe acceptable",
+          "Mount with vibration dampers",
+          "Include fuel flow control"
+        ]
+      }
+    },
+    {
+      "id": "demonstration_medium",
+      "name": "Medium Performance Engine",
+      "category": "demonstration",
+      "description": "Balanced design for educational demonstrations and moderate applications",
+      "target_applications": [
+        "University demonstrations",
+        "Engineering education",
+        "Medium RC aircraft",
+        "Research platforms"
+      ],
+      "estimated_performance": {
+        "thrust": "40-80 N",
+        "frequency": "70-110 Hz",
+        "fuel_consumption": "3.0-6.0 kg/h",
+        "weight": "3.0-5.0 kg"
+      },
+      "geometry": {
+        "combustion_chamber_length": 50,
+        "combustion_chamber_diameter": 15,
+        "intake_diameter": 8,
+        "exhaust_diameter": 10,
+        "exhaust_length": 80
+      },
+      "valves": {
+        "valve_type": "Reed Valves",
+        "num_valves": 4,
+        "valve_area": 20
+      },
+      "operating": {
+        "fuel_type": "Gasoline",
+        "air_fuel_ratio": 14.7,
+        "ambient_pressure": 101.3,
+        "ambient_temp": 20
+      },
+      "design_notes": {
+        "advantages": [
+          "Excellent teaching platform",
+          "Good performance balance",
+          "Scalable design",
+          "Well-documented configuration"
+        ],
+        "limitations": [
+          "Requires proper safety measures",
+          "Moderate noise levels",
+          "Need for instrumentation"
+        ],
+        "construction_tips": [
+          "Use instrumentation ports",
+          "Include pressure measurement",
+          "Design for easy disassembly",
+          "Consider noise suppression"
+        ]
+      }
+    },
+    {
+      "id": "research_large",
+      "name": "High Power Research Engine",
+      "category": "research",
+      "description": "Large design optimized for maximum thrust and research applications",
+      "target_applications": [
+        "Research and development",
+        "Large UAVs",
+        "Thrust measurement studies",
+        "Performance optimization research"
+      ],
+      "estimated_performance": {
+        "thrust": "100-200 N",
+        "frequency": "50-90 Hz",
+        "fuel_consumption": "8.0-15.0 kg/h",
+        "weight": "8.0-12.0 kg"
+      },
+      "geometry": {
+        "combustion_chamber_length": 80,
+        "combustion_chamber_diameter": 25,
+        "intake_diameter": 12,
+        "exhaust_diameter": 16,
+        "exhaust_length": 120
+      },
+      "valves": {
+        "valve_type": "Reed Valves",
+        "num_valves": 8,
+        "valve_area": 40
+      },
+      "operating": {
+        "fuel_type": "Kerosene",
+        "air_fuel_ratio": 15.0,
+        "ambient_pressure": 101.3,
+        "ambient_temp": 20
+      },
+      "design_notes": {
+        "advantages": [
+          "High thrust output",
+          "Suitable for large applications",
+          "Research-friendly design",
+          "Robust construction"
+        ],
+        "limitations": [
+          "High fuel consumption",
+          "Significant noise levels",
+          "Requires professional handling",
+          "Complex mounting requirements"
+        ],
+        "construction_tips": [
+          "Use high-temperature alloys",
+          "Implement active cooling",
+          "Include comprehensive instrumentation",
+          "Design robust mounting system"
+        ]
+      }
+    },
+    {
+      "id": "experimental_hydrogen",
+      "name": "Hydrogen Experimental Engine",
+      "category": "experimental",
+      "description": "Clean fuel experimental design for hydrogen combustion studies",
+      "target_applications": [
+        "Clean fuel research",
+        "Hydrogen combustion studies",
+        "Environmental testing",
+        "Advanced propulsion research"
+      ],
+      "estimated_performance": {
+        "thrust": "60-120 N",
+        "frequency": "80-120 Hz",
+        "fuel_consumption": "1.0-2.0 kg/h",
+        "weight": "4.0-6.0 kg"
+      },
+      "geometry": {
+        "combustion_chamber_length": 45,
+        "combustion_chamber_diameter": 12,
+        "intake_diameter": 6,
+        "exhaust_diameter": 8,
+        "exhaust_length": 60
+      },
+      "valves": {
+        "valve_type": "Flapper Valves",
+        "num_valves": 3,
+        "valve_area": 15
+      },
+      "operating": {
+        "fuel_type": "Hydrogen",
+        "air_fuel_ratio": 34.3,
+        "ambient_pressure": 101.3,
+        "ambient_temp": 20
+      },
+      "design_notes": {
+        "advantages": [
+          "Zero carbon emissions",
+          "High energy density fuel",
+          "Fast flame speed",
+          "Research potential"
+        ],
+        "limitations": [
+          "Safety considerations critical",
+          "Special fuel handling required",
+          "Wide flammability limits",
+          "Material compatibility issues"
+        ],
+        "construction_tips": [
+          "Use hydrogen-compatible materials",
+          "Implement leak detection",
+          "Design explosion-proof enclosures",
+          "Include emergency shutdown systems"
+        ],
+        "safety_requirements": [
+          "Hydrogen leak detection mandatory",
+          "Explosion-proof electrical equipment",
+          "Adequate ventilation required",
+          "Emergency procedures essential",
+          "Professional supervision recommended"
+        ]
+      }
+    },
+    {
+      "id": "experimental_multifuel",
+      "name": "Multi-Fuel Research Engine",
+      "category": "experimental",
+      "description": "Versatile design capable of running on multiple fuel types for comparative studies",
+      "target_applications": [
+        "Fuel comparison studies",
+        "Combustion research",
+        "Performance optimization",
+        "Educational demonstrations"
+      ],
+      "estimated_performance": {
+        "thrust": "50-100 N",
+        "frequency": "60-100 Hz",
+        "fuel_consumption": "Variable by fuel type",
+        "weight": "5.0-7.0 kg"
+      },
+      "geometry": {
+        "combustion_chamber_length": 60,
+        "combustion_chamber_diameter": 18,
+        "intake_diameter": 9,
+        "exhaust_diameter": 12,
+        "exhaust_length": 90
+      },
+      "valves": {
+        "valve_type": "Reed Valves",
+        "num_valves": 6,
+        "valve_area": 25
+      },
+      "operating": {
+        "fuel_type": "Gasoline",
+        "air_fuel_ratio": 14.7,
+        "ambient_pressure": 101.3,
+        "ambient_temp": 20
+      },
+      "design_notes": {
+        "advantages": [
+          "Fuel flexibility",
+          "Research versatility",
+          "Comparative studies possible",
+          "Educational value"
+        ],
+        "limitations": [
+          "Complex fuel system",
+          "Optimization challenges",
+          "Safety considerations for multiple fuels",
+          "Higher initial cost"
+        ],
+        "construction_tips": [
+          "Design modular fuel system",
+          "Include fuel switching capability",
+          "Use compatible materials",
+          "Implement safety interlocks"
+        ],
+        "fuel_options": {
+          "gasoline": {
+            "air_fuel_ratio": 14.7,
+            "expected_thrust": "70-90 N",
+            "notes": "Baseline configuration"
+          },
+          "propane": {
+            "air_fuel_ratio": 15.7,
+            "expected_thrust": "75-95 N",
+            "notes": "Clean burning, good performance"
+          },
+          "ethanol": {
+            "air_fuel_ratio": 9.0,
+            "expected_thrust": "60-80 N",
+            "notes": "Renewable fuel option"
+          },
+          "kerosene": {
+            "air_fuel_ratio": 15.0,
+            "expected_thrust": "65-85 N",
+            "notes": "Good storage stability"
+          }
+        }
+      }
+    },
+    {
+      "id": "demonstration_educational",
+      "name": "Educational Demonstration Engine",
+      "category": "demonstration",
+      "description": "Safe, transparent design optimized for educational demonstrations and student learning",
+      "target_applications": [
+        "Classroom demonstrations",
+        "Student laboratories",
+        "Science museums",
+        "Engineering education"
+      ],
+      "estimated_performance": {
+        "thrust": "25-50 N",
+        "frequency": "80-120 Hz",
+        "fuel_consumption": "2.0-4.0 kg/h",
+        "weight": "3.0-4.0 kg"
+      },
+      "geometry": {
+        "combustion_chamber_length": 40,
+        "combustion_chamber_diameter": 12,
+        "intake_diameter": 6,
+        "exhaust_diameter": 8,
+        "exhaust_length": 60
+      },
+      "valves": {
+        "valve_type": "Reed Valves",
+        "num_valves": 4,
+        "valve_area": 16
+      },
+      "operating": {
+        "fuel_type": "Propane",
+        "air_fuel_ratio": 15.7,
+        "ambient_pressure": 101.3,
+        "ambient_temp": 20
+      },
+      "design_notes": {
+        "advantages": [
+          "Enhanced safety features",
+          "Excellent visibility of operation",
+          "Educational instrumentation",
+          "Controlled operating conditions"
+        ],
+        "limitations": [
+          "Performance optimized for safety",
+          "Higher cost due to safety features",
+          "Requires trained operators"
+        ],
+        "construction_tips": [
+          "Use transparent materials where possible",
+          "Include comprehensive instrumentation",
+          "Design multiple safety interlocks",
+          "Provide clear operational procedures"
+        ],
+        "safety_features": [
+          "Emergency shutdown system",
+          "Fuel flow control and monitoring",
+          "Temperature and pressure monitoring",
+          "Automatic fire suppression",
+          "Sound attenuation enclosure",
+          "Vibration isolation mounting"
+        ],
+        "instrumentation": [
+          "Thrust measurement",
+          "Fuel flow measurement",
+          "Combustion chamber pressure",
+          "Exhaust temperature",
+          "Operating frequency",
+          "Air-fuel ratio monitoring"
+        ]
+      }
+    },
+    {
+      "id": "hobby_high_performance",
+      "name": "High Performance Hobby Engine",
+      "category": "hobby",
+      "description": "Optimized design for maximum performance in hobby applications",
+      "target_applications": [
+        "Competition RC aircraft",
+        "Performance demonstrations",
+        "Speed records",
+        "Advanced hobbyists"
+      ],
+      "estimated_performance": {
+        "thrust": "80-150 N",
+        "frequency": "100-150 Hz",
+        "fuel_consumption": "6.0-10.0 kg/h",
+        "weight": "4.0-6.0 kg"
+      },
+      "geometry": {
+        "combustion_chamber_length": 55,
+        "combustion_chamber_diameter": 20,
+        "intake_diameter": 10,
+        "exhaust_diameter": 13,
+        "exhaust_length": 75
+      },
+      "valves": {
+        "valve_type": "Reed Valves",
+        "num_valves": 6,
+        "valve_area": 30
+      },
+      "operating": {
+        "fuel_type": "Gasoline",
+        "air_fuel_ratio": 13.5,
+        "ambient_pressure": 101.3,
+        "ambient_temp": 20
+      },
+      "design_notes": {
+        "advantages": [
+          "High thrust-to-weight ratio",
+          "Optimized for performance",
+          "Competition-ready design",
+          "Advanced features"
+        ],
+        "limitations": [
+          "High fuel consumption",
+          "Requires experienced operator",
+          "Maintenance intensive",
+          "Higher noise levels"
+        ],
+        "construction_tips": [
+          "Use high-performance materials",
+          "Optimize for minimum weight",
+          "Include performance monitoring",
+          "Design for quick maintenance"
+        ],
+        "performance_features": [
+          "Optimized valve timing",
+          "High-flow intake design",
+          "Tuned exhaust system",
+          "Lightweight construction",
+          "Performance monitoring capability"
+        ]
+      }
+    }
+  ],
+  "design_guidelines": {
+    "general": {
+      "safety_first": "Always prioritize safety in design and operation",
+      "start_simple": "Begin with proven configurations before attempting modifications",
+      "document_changes": "Keep detailed records of all design modifications",
+      "test_incrementally": "Make small changes and test thoroughly"
+    },
+    "scaling_rules": {
+      "thrust_scaling": "Thrust scales approximately with combustion volume",
+      "frequency_scaling": "Frequency decreases with square root of exhaust length",
+      "fuel_consumption": "Fuel consumption scales with thrust and efficiency",
+      "weight_scaling": "Weight scales with material thickness and volume"
+    },
+    "material_recommendations": {
+      "combustion_chamber": "Stainless steel 304 or 316 for durability",
+      "exhaust_pipe": "Stainless steel or mild steel with heat treatment",
+      "valves": "Spring steel or titanium for reed valves",
+      "mounting": "Aluminum or steel with vibration isolation"
+    },
+    "safety_considerations": {
+      "fuel_handling": "Follow proper fuel storage and handling procedures",
+      "fire_safety": "Have appropriate fire suppression equipment available",
+      "noise_protection": "Use hearing protection and consider noise ordinances",
+      "vibration_control": "Proper mounting to prevent structural damage",
+      "emergency_procedures": "Establish clear emergency shutdown procedures"
+    }
+  }
+}
