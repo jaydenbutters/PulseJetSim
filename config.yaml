@@ -1,0 +1,99 @@
+# Pulse Jet Modeler Configuration
+
+app:
+  title: "Pulse Jet Engine Design & Performance Modeler"
+  icon: "🚀"
+  layout: "wide"
+  theme: "light"
+
+# Default parameter ranges and values
+parameters:
+  geometry:
+    combustion_chamber_length:
+      min: 10
+      max: 100
+      default: 50
+      unit: "cm"
+    combustion_chamber_diameter:
+      min: 5
+      max: 30
+      default: 15
+      unit: "cm"
+    intake_diameter:
+      min: 2
+      max: 15
+      default: 8
+      unit: "cm"
+    exhaust_diameter:
+      min: 3
+      max: 20
+      default: 10
+      unit: "cm"
+    exhaust_length:
+      min: 20
+      max: 200
+      default: 80
+      unit: "cm"
+
+  valves:
+    types: ["Reed Valves", "Flapper Valves", "Rotary Valves"]
+    default_type: "Reed Valves"
+    num_valves:
+      min: 1
+      max: 12
+      default: 4
+    valve_area:
+      min: 5
+      max: 50
+      default: 20
+      unit: "cm²"
+
+  operating:
+    fuel_types: ["Gasoline", "Propane", "Hydrogen", "Kerosene"]
+    default_fuel: "Gasoline"
+    air_fuel_ratio:
+      min: 10.0
+      max: 20.0
+      default: 14.7
+      step: 0.1
+    ambient_pressure:
+      min: 80
+      max: 120
+      default: 101.3
+      step: 0.1
+      unit: "kPa"
+    ambient_temp:
+      min: -20
+      max: 50
+      default: 20
+      unit: "°C"
+
+# Model constants and coefficients
+model:
+  constants:
+    gas_constant: 287  # J/kg·K
+    gamma: 1.4  # Heat capacity ratio
+    gravity: 9.81  # m/s²
+  
+  coefficients:
+    frequency_constant: 17000  # For Helmholtz resonator approximation
+    efficiency: 0.3  # Estimated combustion efficiency
+    valve_discharge_coeff: 0.8  # Valve discharge coefficient
+
+# Visualization settings
+visualization:
+  colors:
+    primary: "#FF4B4B"
+    secondary: "#00D4AA"
+    accent: "#FFC107"
+  
+  plot_settings:
+    dpi: 300
+    figure_size: [10, 6]
+    grid: true
+    
+# File paths
+paths:
+  data: "data/"
+  exports: "exports/"
+  configs: "saved_configs/"
