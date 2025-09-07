@@ -1,0 +1,332 @@
+{
+  "metadata": {
+    "version": "1.0.0",
+    "description": "Comprehensive fuel properties database for pulse jet engine analysis",
+    "last_updated": "2024-01-15",
+    "units": {
+      "heating_value": "MJ/kg",
+      "density": "kg/L at 15°C",
+      "molecular_weight": "g/mol",
+      "autoignition_temp": "°C",
+      "flash_point": "°C", 
+      "boiling_point": "°C",
+      "vapor_pressure": "kPa at 20°C",
+      "specific_heat": "kJ/kg·K",
+      "thermal_conductivity": "W/m·K"
+    },
+    "sources": [
+      "NIST Chemistry WebBook",
+      "Engineering ToolBox",
+      "Aircraft Engine Design (Mattingly)",
+      "Gas Turbine Theory (Cohen)"
+    ]
+  },
+  "fuels": {
+    "Gasoline": {
+      "name": "Gasoline (Aviation Grade)",
+      "formula": "C8H18 (average)",
+      "heating_value_lower": 44.0,
+      "heating_value_higher": 47.3,
+      "density": 0.75,
+      "stoich_ratio": 14.7,
+      "molecular_weight": 114,
+      "autoignition_temp": 280,
+      "flash_point": -43,
+      "boiling_point": 38,
+      "freezing_point": -60,
+      "octane_rating": 100,
+      "vapor_pressure": 45,
+      "specific_heat": 2.22,
+      "thermal_conductivity": 0.14,
+      "viscosity": 0.65,
+      "combustion_products": {
+        "CO2": 3.09,
+        "H2O": 3.17,
+        "energy_per_mole": 5074
+      },
+      "mixture_limits": {
+        "lean_limit": 18.5,
+        "rich_limit": 8.5,
+        "optimal_power": 12.5,
+        "optimal_economy": 16.0
+      },
+      "properties": {
+        "cetane_number": null,
+        "research_octane": 100,
+        "motor_octane": 87,
+        "anti_knock_index": 93.5,
+        "gum_content": "low",
+        "corrosiveness": "low"
+      },
+      "handling": {
+        "toxicity": "moderate",
+        "fire_hazard": "high",
+        "explosion_hazard": "high",
+        "environmental_impact": "moderate",
+        "storage_stability": "good"
+      },
+      "applications": [
+        "Aircraft engines",
+        "Automotive racing",
+        "Marine engines",
+        "Small aircraft"
+      ],
+      "notes": "Standard aviation gasoline with excellent anti-knock properties. Widely available and well-suited for pulse jet applications."
+    },
+    "Propane": {
+      "name": "Propane (LPG)",
+      "formula": "C3H8",
+      "heating_value_lower": 46.4,
+      "heating_value_higher": 50.4,
+      "density": 0.51,
+      "stoich_ratio": 15.7,
+      "molecular_weight": 44,
+      "autoignition_temp": 470,
+      "flash_point": -104,
+      "boiling_point": -42,
+      "freezing_point": -188,
+      "octane_rating": 112,
+      "vapor_pressure": 853,
+      "specific_heat": 2.48,
+      "thermal_conductivity": 0.018,
+      "viscosity": 0.1,
+      "combustion_products": {
+        "CO2": 3.0,
+        "H2O": 4.0,
+        "energy_per_mole": 2220
+      },
+      "mixture_limits": {
+        "lean_limit": 24.0,
+        "rich_limit": 9.5,
+        "optimal_power": 13.5,
+        "optimal_economy": 18.0
+      },
+      "properties": {
+        "cetane_number": null,
+        "research_octane": 112,
+        "motor_octane": 97,
+        "anti_knock_index": 104,
+        "gum_content": "none",
+        "corrosiveness": "very low"
+      },
+      "handling": {
+        "toxicity": "low",
+        "fire_hazard": "high",
+        "explosion_hazard": "high",
+        "environmental_impact": "low",
+        "storage_stability": "excellent"
+      },
+      "applications": [
+        "Heating and cooking",
+        "Industrial processes",
+        "Vehicle fuel",
+        "Backup generators"
+      ],
+      "notes": "Clean-burning fuel with excellent storage characteristics. High octane rating makes it ideal for high-performance applications."
+    },
+    "Hydrogen": {
+      "name": "Hydrogen Gas",
+      "formula": "H2",
+      "heating_value_lower": 120.0,
+      "heating_value_higher": 142.0,
+      "density": 0.0899,
+      "stoich_ratio": 34.3,
+      "molecular_weight": 2,
+      "autoignition_temp": 500,
+      "flash_point": -253,
+      "boiling_point": -253,
+      "freezing_point": -259,
+      "octane_rating": 130,
+      "vapor_pressure": 101325,
+      "specific_heat": 14.3,
+      "thermal_conductivity": 0.18,
+      "viscosity": 0.009,
+      "combustion_products": {
+        "CO2": 0,
+        "H2O": 2.0,
+        "energy_per_mole": 286
+      },
+      "mixture_limits": {
+        "lean_limit": 75.0,
+        "rich_limit": 15.0,
+        "optimal_power": 29.0,
+        "optimal_economy": 50.0
+      },
+      "properties": {
+        "cetane_number": null,
+        "research_octane": 130,
+        "motor_octane": 130,
+        "anti_knock_index": 130,
+        "gum_content": "none",
+        "corrosiveness": "moderate"
+      },
+      "handling": {
+        "toxicity": "none",
+        "fire_hazard": "extreme",
+        "explosion_hazard": "extreme",
+        "environmental_impact": "none",
+        "storage_stability": "special requirements"
+      },
+      "applications": [
+        "Fuel cells",
+        "Rocket propulsion",
+        "Industrial processes",
+        "Future transportation"
+      ],
+      "notes": "Highest energy density by mass. Zero carbon emissions but requires special handling due to wide flammability limits and high diffusivity."
+    },
+    "Kerosene": {
+      "name": "Kerosene (Jet A-1)",
+      "formula": "C12H23 (average)",
+      "heating_value_lower": 43.2,
+      "heating_value_higher": 46.4,
+      "density": 0.82,
+      "stoich_ratio": 15.0,
+      "molecular_weight": 170,
+      "autoignition_temp": 210,
+      "flash_point": 38,
+      "boiling_point": 150,
+      "freezing_point": -60,
+      "octane_rating": 50,
+      "vapor_pressure": 0.2,
+      "specific_heat": 2.01,
+      "thermal_conductivity": 0.15,
+      "viscosity": 1.6,
+      "combustion_products": {
+        "CO2": 3.16,
+        "H2O": 3.45,
+        "energy_per_mole": 7540
+      },
+      "mixture_limits": {
+        "lean_limit": 22.0,
+        "rich_limit": 8.0,
+        "optimal_power": 12.0,
+        "optimal_economy": 18.0
+      },
+      "properties": {
+        "cetane_number": 45,
+        "research_octane": 50,
+        "motor_octane": 50,
+        "anti_knock_index": 50,
+        "gum_content": "very low",
+        "corrosiveness": "low"
+      },
+      "handling": {
+        "toxicity": "low",
+        "fire_hazard": "moderate",
+        "explosion_hazard": "low",
+        "environmental_impact": "moderate",
+        "storage_stability": "excellent"
+      },
+      "applications": [
+        "Jet engines",
+        "Diesel engines",
+        "Heating fuel",
+        "Lamp fuel"
+      ],
+      "notes": "Excellent storage stability and safety characteristics. Lower volatility than gasoline makes it safer to handle but may require heating for good atomization."
+    },
+    "Methanol": {
+      "name": "Methanol (Methyl Alcohol)",
+      "formula": "CH3OH",
+      "heating_value_lower": 19.9,
+      "heating_value_higher": 22.7,
+      "density": 0.79,
+      "stoich_ratio": 6.45,
+      "molecular_weight": 32,
+      "autoignition_temp": 470,
+      "flash_point": 11,
+      "boiling_point": 65,
+      "freezing_point": -98,
+      "octane_rating": 107,
+      "vapor_pressure": 13.0,
+      "specific_heat": 2.55,
+      "thermal_conductivity": 0.20,
+      "viscosity": 0.54,
+      "combustion_products": {
+        "CO2": 1.0,
+        "H2O": 2.0,
+        "energy_per_mole": 726
+      },
+      "mixture_limits": {
+        "lean_limit": 36.0,
+        "rich_limit": 4.3,
+        "optimal_power": 5.5,
+        "optimal_economy": 9.0
+      },
+      "properties": {
+        "cetane_number": 3,
+        "research_octane": 107,
+        "motor_octane": 92,
+        "anti_knock_index": 99,
+        "gum_content": "none",
+        "corrosiveness": "moderate"
+      },
+      "handling": {
+        "toxicity": "high",
+        "fire_hazard": "high",
+        "explosion_hazard": "moderate",
+        "environmental_impact": "low",
+        "storage_stability": "good"
+      },
+      "applications": [
+        "Racing fuel",
+        "Fuel cells",
+        "Industrial solvent",
+        "Antifreeze"
+      ],
+      "notes": "High octane rating but lower energy density. Corrosive to some materials. Wide flammability range makes it suitable for pulse jets."
+    },
+    "Ethanol": {
+      "name": "Ethanol (Ethyl Alcohol)",
+      "formula": "C2H5OH",
+      "heating_value_lower": 26.8,
+      "heating_value_higher": 29.7,
+      "density": 0.79,
+      "stoich_ratio": 9.0,
+      "molecular_weight": 46,
+      "autoignition_temp": 425,
+      "flash_point": 13,
+      "boiling_point": 78,
+      "freezing_point": -114,
+      "octane_rating": 109,
+      "vapor_pressure": 5.8,
+      "specific_heat": 2.44,
+      "thermal_conductivity": 0.17,
+      "viscosity": 1.1,
+      "combustion_products": {
+        "CO2": 2.0,
+        "H2O": 3.0,
+        "energy_per_mole": 1367
+      },
+      "mixture_limits": {
+        "lean_limit": 19.0,
+        "rich_limit": 4.3,
+        "optimal_power": 6.5,
+        "optimal_economy": 12.0
+      },
+      "properties": {
+        "cetane_number": 8,
+        "research_octane": 109,
+        "motor_octane": 90,
+        "anti_knock_index": 99,
+        "gum_content": "none",
+        "corrosiveness": "moderate"
+      },
+      "handling": {
+        "toxicity": "moderate",
+        "fire_hazard": "high",
+        "explosion_hazard": "moderate",
+        "environmental_impact": "very low",
+        "storage_stability": "good"
+      },
+      "applications": [
+        "Automotive fuel",
+        "Racing fuel",
+        "Industrial solvent",
+        "Beverage alcohol"
+      ],
+      "notes": "Renewable fuel with good anti-knock properties. Lower energy density than gasoline but burns cleanly. Hygroscopic - absorbs water from air."
+    }
+  }
+}
