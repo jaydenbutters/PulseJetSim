@@ -210,13 +210,16 @@ def create_sidebar_inputs():
             "Fuel Type", ["Gasoline", "Propane", "Hydrogen", "Kerosene"],
             index=["Gasoline", "Propane", "Hydrogen", "Kerosene"].index(op_defaults['fuel_type'])
         )
-        air_fuel_ratio = st.sidebar.slider("Air-Fuel Ratio", 10.0, 20.0, op_defaults['air_fuel_ratio'], 0.1)
-        ambient_pressure = st.sidebar.slider("Ambient Pressure (kPa)", 80, 120, op_defaults['ambient_pressure'], 0.1)
+        # FIX: Convert to float to match step parameter
+        air_fuel_ratio = st.sidebar.slider("Air-Fuel Ratio", 10.0, 20.0, float(op_defaults['air_fuel_ratio']), 0.1)
+        # FIX: Convert to float to match step parameter  
+        ambient_pressure = st.sidebar.slider("Ambient Pressure (kPa)", 80.0, 120.0, float(op_defaults['ambient_pressure']), 0.1)
         ambient_temp = st.sidebar.slider("Ambient Temperature (°C)", -20, 50, op_defaults['ambient_temp'])
     else:
         fuel_type = st.sidebar.selectbox("Fuel Type", ["Gasoline", "Propane", "Hydrogen", "Kerosene"])
+        # FIX: All parameters should be float when using float step
         air_fuel_ratio = st.sidebar.slider("Air-Fuel Ratio", 10.0, 20.0, 14.7, 0.1)
-        ambient_pressure = st.sidebar.slider("Ambient Pressure (kPa)", 80, 120, 101.3, 0.1)
+        ambient_pressure = st.sidebar.slider("Ambient Pressure (kPa)", 80.0, 120.0, 101.3, 0.1)
         ambient_temp = st.sidebar.slider("Ambient Temperature (°C)", -20, 50, 20)
     
     return {
