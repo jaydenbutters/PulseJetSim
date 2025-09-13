@@ -484,7 +484,7 @@ def create_technical_diagram(params):
         title_x=0.02,
         title_font=dict(size=18, color="black"),
         showlegend=False,
-        width=svg_width,
+        # Remove fixed width to allow Streamlit to handle full width
         height=svg_height,
         margin=dict(l=20, r=20, t=40, b=20),
         plot_bgcolor="white",
