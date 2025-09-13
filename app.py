@@ -297,135 +297,156 @@ def create_technical_diagram(params):
     
     # Total length dimension
     fig.add_shape(type="line",
-                  x0=offset_x - intake_length, y0=offset_y + chamber_radius + 60,
-                  x1=offset_x + chamber_length + exhaust_length, y1=offset_y + chamber_radius + 60,
+                  x0=offset_x - intake_length, y0=offset_y + chamber_radius + 80,
+                  x1=offset_x + chamber_length + exhaust_length, y1=offset_y + chamber_radius + 80,
                   line=dict(color="black", width=1))
     
     # Tick marks for total length
     fig.add_shape(type="line",
-                  x0=offset_x - intake_length, y0=offset_y + chamber_radius + 55,
-                  x1=offset_x - intake_length, y1=offset_y + chamber_radius + 65,
+                  x0=offset_x - intake_length, y0=offset_y + chamber_radius + 75,
+                  x1=offset_x - intake_length, y1=offset_y + chamber_radius + 85,
                   line=dict(color="black", width=1))
     fig.add_shape(type="line",
-                  x0=offset_x + chamber_length + exhaust_length, y0=offset_y + chamber_radius + 55,
-                  x1=offset_x + chamber_length + exhaust_length, y1=offset_y + chamber_radius + 65,
+                  x0=offset_x + chamber_length + exhaust_length, y0=offset_y + chamber_radius + 75,
+                  x1=offset_x + chamber_length + exhaust_length, y1=offset_y + chamber_radius + 85,
                   line=dict(color="black", width=1))
     
     # Total length annotation
     total_length = intake_length_mm + chamber_length_mm + exhaust_length_mm
     fig.add_annotation(
         x=(offset_x - intake_length + offset_x + chamber_length + exhaust_length) / 2,
-        y=offset_y + chamber_radius + 80,
+        y=offset_y + chamber_radius + 100,
         text=f"≈ {total_length:.0f} mm = {total_length/1000:.1f} m",
         showarrow=False,
-        font=dict(size=11)
+        font=dict(size=12)
     )
     
     # Chamber length dimension
     fig.add_shape(type="line",
-                  x0=offset_x, y0=offset_y + chamber_radius + 30,
-                  x1=offset_x + chamber_length, y1=offset_y + chamber_radius + 30,
+                  x0=offset_x, y0=offset_y + chamber_radius + 40,
+                  x1=offset_x + chamber_length, y1=offset_y + chamber_radius + 40,
                   line=dict(color="black", width=1))
     fig.add_shape(type="line",
-                  x0=offset_x, y0=offset_y + chamber_radius + 25,
-                  x1=offset_x, y1=offset_y + chamber_radius + 35,
+                  x0=offset_x, y0=offset_y + chamber_radius + 35,
+                  x1=offset_x, y1=offset_y + chamber_radius + 45,
                   line=dict(color="black", width=1))
     fig.add_shape(type="line",
-                  x0=offset_x + chamber_length, y0=offset_y + chamber_radius + 25,
-                  x1=offset_x + chamber_length, y1=offset_y + chamber_radius + 35,
+                  x0=offset_x + chamber_length, y0=offset_y + chamber_radius + 35,
+                  x1=offset_x + chamber_length, y1=offset_y + chamber_radius + 45,
                   line=dict(color="black", width=1))
     fig.add_annotation(
         x=offset_x + chamber_length/2,
-        y=offset_y + chamber_radius + 45,
+        y=offset_y + chamber_radius + 55,
         text=f"{chamber_length_mm:.0f} mm",
         showarrow=False,
-        font=dict(size=11)
+        font=dict(size=12)
     )
     
     # Exhaust length dimension
     fig.add_shape(type="line",
-                  x0=offset_x + chamber_length, y0=offset_y - exhaust_radius - 30,
-                  x1=offset_x + chamber_length + exhaust_length, y1=offset_y - exhaust_radius - 30,
+                  x0=offset_x + chamber_length, y0=offset_y - exhaust_radius - 40,
+                  x1=offset_x + chamber_length + exhaust_length, y1=offset_y - exhaust_radius - 40,
                   line=dict(color="black", width=1))
     fig.add_shape(type="line",
-                  x0=offset_x + chamber_length, y0=offset_y - exhaust_radius - 35,
-                  x1=offset_x + chamber_length, y1=offset_y - exhaust_radius - 25,
+                  x0=offset_x + chamber_length, y0=offset_y - exhaust_radius - 45,
+                  x1=offset_x + chamber_length, y1=offset_y - exhaust_radius - 35,
                   line=dict(color="black", width=1))
     fig.add_shape(type="line",
-                  x0=offset_x + chamber_length + exhaust_length, y0=offset_y - exhaust_radius - 35,
-                  x1=offset_x + chamber_length + exhaust_length, y1=offset_y - exhaust_radius - 25,
+                  x0=offset_x + chamber_length + exhaust_length, y0=offset_y - exhaust_radius - 45,
+                  x1=offset_x + chamber_length + exhaust_length, y1=offset_y - exhaust_radius - 35,
                   line=dict(color="black", width=1))
     fig.add_annotation(
         x=offset_x + chamber_length + exhaust_length/2,
-        y=offset_y - exhaust_radius - 40,
+        y=offset_y - exhaust_radius - 55,
         text=f"{exhaust_length_mm:.0f} mm",
         showarrow=False,
-        font=dict(size=11)
+        font=dict(size=12)
+    )
+    
+    # Intake length dimension
+    fig.add_shape(type="line",
+                  x0=offset_x - intake_length, y0=offset_y - intake_radius - 40,
+                  x1=offset_x, y1=offset_y - intake_radius - 40,
+                  line=dict(color="black", width=1))
+    fig.add_shape(type="line",
+                  x0=offset_x - intake_length, y0=offset_y - intake_radius - 45,
+                  x1=offset_x - intake_length, y1=offset_y - intake_radius - 35,
+                  line=dict(color="black", width=1))
+    fig.add_shape(type="line",
+                  x0=offset_x, y0=offset_y - intake_radius - 45,
+                  x1=offset_x, y1=offset_y - intake_radius - 35,
+                  line=dict(color="black", width=1))
+    fig.add_annotation(
+        x=offset_x - intake_length/2,
+        y=offset_y - intake_radius - 55,
+        text=f"{intake_length_mm:.0f} mm",
+        showarrow=False,
+        font=dict(size=12)
     )
     
     # Chamber diameter dimension
     fig.add_shape(type="line",
-                  x0=offset_x - 30, y0=offset_y - chamber_radius,
-                  x1=offset_x - 30, y1=offset_y + chamber_radius,
+                  x0=offset_x - 40, y0=offset_y - chamber_radius,
+                  x1=offset_x - 40, y1=offset_y + chamber_radius,
                   line=dict(color="black", width=1))
     fig.add_shape(type="line",
-                  x0=offset_x - 35, y0=offset_y - chamber_radius,
-                  x1=offset_x - 25, y1=offset_y - chamber_radius,
+                  x0=offset_x - 45, y0=offset_y - chamber_radius,
+                  x1=offset_x - 35, y1=offset_y - chamber_radius,
                   line=dict(color="black", width=1))
     fig.add_shape(type="line",
-                  x0=offset_x - 35, y0=offset_y + chamber_radius,
-                  x1=offset_x - 25, y1=offset_y + chamber_radius,
+                  x0=offset_x - 45, y0=offset_y + chamber_radius,
+                  x1=offset_x - 35, y1=offset_y + chamber_radius,
                   line=dict(color="black", width=1))
     fig.add_annotation(
-        x=offset_x - 45,
+        x=offset_x - 55,
         y=offset_y,
         text=f"{chamber_diameter_mm:.0f} mm",
         showarrow=False,
-        font=dict(size=11),
+        font=dict(size=12),
         textangle=-90
     )
     
     # Intake diameter dimension
     fig.add_shape(type="line",
-                  x0=offset_x - intake_length - 20, y0=offset_y - intake_radius,
-                  x1=offset_x - intake_length - 20, y1=offset_y + intake_radius,
+                  x0=offset_x - intake_length - 30, y0=offset_y - intake_radius,
+                  x1=offset_x - intake_length - 30, y1=offset_y + intake_radius,
                   line=dict(color="black", width=1))
     fig.add_shape(type="line",
-                  x0=offset_x - intake_length - 25, y0=offset_y - intake_radius,
-                  x1=offset_x - intake_length - 15, y1=offset_y - intake_radius,
+                  x0=offset_x - intake_length - 35, y0=offset_y - intake_radius,
+                  x1=offset_x - intake_length - 25, y1=offset_y - intake_radius,
                   line=dict(color="black", width=1))
     fig.add_shape(type="line",
-                  x0=offset_x - intake_length - 25, y0=offset_y + intake_radius,
-                  x1=offset_x - intake_length - 15, y1=offset_y + intake_radius,
+                  x0=offset_x - intake_length - 35, y0=offset_y + intake_radius,
+                  x1=offset_x - intake_length - 25, y1=offset_y + intake_radius,
                   line=dict(color="black", width=1))
     fig.add_annotation(
-        x=offset_x - intake_length - 35,
+        x=offset_x - intake_length - 45,
         y=offset_y,
         text=f"{intake_diameter_mm:.0f} mm",
         showarrow=False,
-        font=dict(size=11),
+        font=dict(size=12),
         textangle=-90
     )
     
     # Exhaust diameter dimension
     fig.add_shape(type="line",
-                  x0=offset_x + chamber_length + exhaust_length + 20, y0=offset_y - exhaust_radius,
-                  x1=offset_x + chamber_length + exhaust_length + 20, y1=offset_y + exhaust_radius,
+                  x0=offset_x + chamber_length + exhaust_length + 30, y0=offset_y - exhaust_radius,
+                  x1=offset_x + chamber_length + exhaust_length + 30, y1=offset_y + exhaust_radius,
                   line=dict(color="black", width=1))
     fig.add_shape(type="line",
-                  x0=offset_x + chamber_length + exhaust_length + 15, y0=offset_y - exhaust_radius,
-                  x1=offset_x + chamber_length + exhaust_length + 25, y1=offset_y - exhaust_radius,
+                  x0=offset_x + chamber_length + exhaust_length + 25, y0=offset_y - exhaust_radius,
+                  x1=offset_x + chamber_length + exhaust_length + 35, y1=offset_y - exhaust_radius,
                   line=dict(color="black", width=1))
     fig.add_shape(type="line",
-                  x0=offset_x + chamber_length + exhaust_length + 15, y0=offset_y + exhaust_radius,
-                  x1=offset_x + chamber_length + exhaust_length + 25, y1=offset_y + exhaust_radius,
+                  x0=offset_x + chamber_length + exhaust_length + 25, y0=offset_y + exhaust_radius,
+                  x1=offset_x + chamber_length + exhaust_length + 35, y1=offset_y + exhaust_radius,
                   line=dict(color="black", width=1))
     fig.add_annotation(
-        x=offset_x + chamber_length + exhaust_length + 35,
+        x=offset_x + chamber_length + exhaust_length + 45,
         y=offset_y,
         text=f"{exhaust_diameter_mm:.0f} mm",
         showarrow=False,
-        font=dict(size=11),
+        font=dict(size=12),
         textangle=-90
     )
     
@@ -436,36 +457,36 @@ def create_technical_diagram(params):
                   line=dict(color="black", width=0.5, dash="dash"))
     
     # Valve indicators
-    valve_x = offset_x - 40
+    valve_x = offset_x - 60
     fig.add_shape(type="rect",
-                  x0=valve_x - 8, y0=offset_y - 12,
-                  x1=valve_x + 8, y1=offset_y - 8,
+                  x0=valve_x - 10, y0=offset_y - 15,
+                  x1=valve_x + 10, y1=offset_y - 10,
                   fillcolor="black", line=dict(color="black"))
     fig.add_shape(type="rect",
-                  x0=valve_x - 8, y0=offset_y + 8,
-                  x1=valve_x + 8, y1=offset_y + 12,
+                  x0=valve_x - 10, y0=offset_y + 10,
+                  x1=valve_x + 10, y1=offset_y + 15,
                   fillcolor="black", line=dict(color="black"))
     
     # Labels
-    fig.add_annotation(x=offset_x - intake_length/2, y=offset_y - intake_radius - 60,
-                      text="Air Intake", showarrow=False, font=dict(size=12, color="black"))
-    fig.add_annotation(x=offset_x + chamber_length/2, y=offset_y - chamber_radius - 60,
-                      text="Combustion Chamber", showarrow=False, font=dict(size=12, color="black"))
-    fig.add_annotation(x=offset_x + chamber_length + exhaust_length/2, y=offset_y + exhaust_radius + 50,
-                      text="Exhaust Pipe", showarrow=False, font=dict(size=12, color="black"))
-    fig.add_annotation(x=valve_x, y=offset_y - 30,
+    fig.add_annotation(x=offset_x - intake_length/2, y=offset_y - intake_radius - 80,
+                      text="Air Intake", showarrow=False, font=dict(size=14, color="black"))
+    fig.add_annotation(x=offset_x + chamber_length/2, y=offset_y - chamber_radius - 80,
+                      text="Combustion Chamber", showarrow=False, font=dict(size=14, color="black"))
+    fig.add_annotation(x=offset_x + chamber_length + exhaust_length/2, y=offset_y + exhaust_radius + 80,
+                      text="Exhaust Pipe", showarrow=False, font=dict(size=14, color="black"))
+    fig.add_annotation(x=valve_x, y=offset_y - 40,
                       text=f"Reed Valves ({params['valves']['num_valves']})", 
-                      showarrow=False, font=dict(size=10, color="black"))
+                      showarrow=False, font=dict(size=12, color="black"))
     
-    # Configure layout
+    # Configure layout for full width
     fig.update_layout(
         title="Pulse Jet Engine (Technical Drawing)",
         title_x=0.02,
-        title_font=dict(size=16, color="black"),
+        title_font=dict(size=18, color="black"),
         showlegend=False,
         width=svg_width,
         height=svg_height,
-        margin=dict(l=0, r=0, t=30, b=0),
+        margin=dict(l=20, r=20, t=40, b=20),
         plot_bgcolor="white",
         paper_bgcolor="white"
     )
